@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PP asks: What would Elias do?</title>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+<script>
+var targets = ["clienterror", "internalservererror", "drunkaf", "jira", "wonderwall", "fullsteam"];
+
+function hash(str){
+    var hash = 0;
+    if (str.length == 0) return hash;
+    for (i = 0; i < str.length; i++) {
+        char = str.charCodeAt(i);
+        hash = ((hash<<5)-hash)+char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
+
+function workhorse() {
+   var q = document.getElementById("question").value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+   var hashed = hash(q);
+   var index = Math.abs(hashed) % targets.length;
+   targets.forEach(function(elem, curIndex){
+     if(curIndex === index){
+       document.getElementById(elem).style.display = "block";
+     } else {
+       document.getElementById(elem).style.display = "none";
+     }
+   });
+}
+</script>
+
+</head>
+
+<body>
+<marquee behavior="alternate" scrollamount=20><h1><font color="#3498db"><b>PP</b></font> asks: What would <font color="red">E</font><font color="blue">l</font><font color="purple">i</font><font color="grey">a</font><font color="AQUA">s</font> do?</h1></marquee>
+<p style="text-align: center">
+<input type="text" id="question"><br>
+<button type="button" onclick="workhorse()">Ask Elias!</button>
+</p>
+<div align="center" style="text-align: center">
+<div id="jira" style="display: none">
+<img style="height:30vw; width:auto;" src="jira.jpg">
+<h1><b>Raise</b> a Jira ticket!!</h1>
+</div>
+<div id="wonderwall" style="display: none">
+<img style="height:30vw; width:auto;" src="wonderwall.jpg">
+<h1>♬ I say "maybe" - but honestly, I think it sounds hasty<br>And after all, that's not protocol ♬</h1>
+</div>
+<div id="fullsteam" style="display: none">
+<img style="height:30vw; width:auto;" src="fullsteam.jpg">
+<h1>Full steam ahead!!!!</h1>
+</div>
+<div id="drunkaf" style="display: none">
+<img style="height:30vw; width:auto;" src="drunkaf.jpg">
+<h1>Get drunk and do something embarrassing!</h1>
+</div>
+<div id="clienterror" style="display: none">
+<img style="height:30vw; width:auto;" src="clienterror.jpg">
+<h1><font color="red">405:</font> Method Not Allowed</h1>
+</div>
+<div id="internalservererror" style="display: none">
+<h1 style="color: RED">500: INTERNAL SERVER ERROR!</h1>
+<div align="center"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Bb1fNqJADfE/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Bb1fNqJADfE/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Elias Court (@neocloudeh)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-11-23T11:18:50+00:00">Nov 23, 2017 at 3:18am PST</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
+</div></div>
+</div>
+</body>
+</html>
